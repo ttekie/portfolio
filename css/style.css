@@ -47,7 +47,6 @@ html {
 }
 body {
   font-family: 'Crimson Pro', serif;
-  font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
   /* color: var(--color-white); */
@@ -55,7 +54,8 @@ body {
 
 h1,
 h2 {
-  font-family: 'Shizuru', cursive;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#191970;
   font-weight: 700;
   text-align: center;
 }
@@ -74,7 +74,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-black);
+  color: #191970;
 }
 
 /* nav */
@@ -134,14 +134,15 @@ a {
 #welcome-section p.title {
   font-size: 3rem;
   font-weight: 200;
-  font-family: 'Eater', cursive;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--color-red);
 }
 p.about-me {
  padding-top: 40px;
  text-align: justify;
  color: var(--color-black);
- font-size: 1.8rem;
+ font-size: 1.5vw;
+ font-family: inherit;
  width: 60%;
 }
 
