@@ -3,136 +3,176 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="css/style.css"/>
-      <link rel="stylesheet" href="css/contact.css">
+      <link rel="stylesheet" href="css/main.css"/>
       <title>Portfolio</title>
    </head>
   <body>
-      <!-- nav section -->
-      <nav id="nav-bar" class="nav">
-         <ul class="nav-list">
-            <li>
-               <a href="#welcome-section">Home</a>
+     <div class="backdrop"></div>
+      <!-- header section -->
+      <header class="main-header">
+         <button class="toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+         </button>
+         <h2 class="logo">TT</h2>
+         <nav class="main-nav">
+            <ul class="main-nav__lists">
+               <li class="main-nav__list">
+                  <a href="#">Home</a>
+               </li>
+               <li class="main-nav__list">
+                  <a href="#info">About</a>
+               </li>
+               <li class="main-nav__list">
+                  <a href="#skills">Skills</a>
+               </li>
+               <li class="main-nav__list">
+                  <a href="#portfolio">Portfolio</a>
+               </li>
+               <li class="main-nav__list">
+                  <a href="#contact">Contact</a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <nav class="mobile-nav">
+         <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+               <a id="home" href="#hero">Home</a>
             </li>
-            <li>
-               <a href="#about-section">About</a>
+            <li class="mobile-nav__item">
+               <a id="about" href="#info">About</a>
             </li>
-            <li>
-               <a href="#projects">Portfolio</a>
+            <li class="mobile-nav__item">
+               <a id="skill" href="#skills">Skills</a>
             </li>
-            <li>
-               <a href="#contact">Contact</a>
+            <li class="mobile-nav__item">
+               <a id="projects" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="mobile-nav__item">
+               <a id="contacts" href="#contact">Contact</a>
             </li>
          </ul>
       </nav>
-
-      <!--welcome section -->
-      <section id="welcome-section">
-      <img src="assets/images/tesImage.png" class="my-image" alt="developer-image">
-      <h1>Hi, I'm Tesfalem</h1>
-      <p class="title">Front End Web  developer</p>
-      </section>
-  
-      <!--about section-->
-      <section id="about-section">
-      <h2 class="about-me-heading">About Me</h2>
-      <p class="about-me">I am a dedicated, energetic, and creative developer. 
-         My goal is to develop web applications with current technology to expose and enhance my skills. 
-         My technical skills include HTML5, CSS3/SASS, Bootstrap, JavaScript, jQuery, Oracle SQL, WordPress, Bash, Git/Github, MongoDB.
-         In my spare time, I enjoy reading and researching on current trends. Please navigate through my site to discover more about me.
-      </p>
-      </section>
-
-      <!-- project section -->
-      <section id="projects" class="project-section">
-      <h2 class="project-header">Project</h2>
-      <div class="project-grid">
-         <a href="https://ttekie.github.io/tribute-page/" target="_blank" class="project project-tile">
-            <img src="assets/images/tribute-site.png" class="project-image" alt="tribute-page">
-            <p class="project-title">
-            Tribute Page
+      <main class="main-section">
+         <section id="hero" class="hero-section">
+            <img src="./images/tesImage.png" class="hero-image" alt="developer-image">
+            <h1 class="hero-name">Hi, I'm Tesfalem</h1>
+            <p class="hero-title">Front End Web  developer</p>
+         </section>
+         <!--info section-->
+         <section id="info" class="info-section">
+            <h2 class="info-title">About Me</h2>
+            <p class="info-desc">I am a dedicated, energetic, and creative developer. 
+               My goal is to develop web applications with current technology to expose and enhance my skills. 
+               My technical skills include HTML5, CSS3/SASS, Bootstrap, JavaScript, jQuery, Oracle SQL, WordPress, Bash, Git/Github.
+               In my spare time, I enjoy reading and researching on current trends. Please navigate through my site to discover more about me.
             </p>
-         </a>
-         <a href="https://ttekie.github.io/tech-documentation-site/" target="_blank" class="project project-tile">
-            <img src="assets/images/Js-documentation.png" class="project-image" alt="tech-documentation-page">
-            <p class="project-title">
-            Tech Documentation Page
-            </p>
-         </a>
-         <a href="https://ttekie.github.io/tic-tac-toe-game/" target="_blank" class="project project-tile">
-            <img src="assets/images/tic-tac-toe-game.png" class="project-image" alt="">
-            <p class="project-title" >
-            Tic Tac Toe Game
-            </p>
-         </a>
-         <a href="https://ttekie.github.io/Concentration_Game/" target="_blank" class="project project-tile">
-            <img src="assets/images/concentration-game.png" class="project-image" alt="concentration-game">
-            <p class="project-title">         
-            Concentration Game      
-            </p>
-         </a>
-         <a href="https://ttekie.github.io/Survey-form/" target="_blank" class="project project-tile">
-            <img src="assets/images/survey-form.png" class="project-image" alt="survey-form">
-            <p class="project-title">          
-            Survey Form
-            </p>
-         </a>
-         <a href="https://ttekie.github.io/Product_Landing_Page/" target="_blank" class="project project-tile">
-            <img src="assets/images/product-landing.png" class="project-image" alt="product-landing-page">
-            <p class="project-title">
-            Product Landing Page
-            </p>
-         </a>
-      </div>
-      <a href="https://github.com/ttekie" class="btn btn-show-all" target="_blank">Show all</a>
-      </section>
-    
-      <!--contact section-->
-      <section id="contact" class="contact-section">
-      <div class="contact-section-header">
-         <form action="process.html" method="get" class="form">
-            <h2 class="contact-heading">Contact Me</h2>
-            <label for="fname" class="label">First Name</label><br>
-            <input type="text" id="fname"><br>
-            <label for="lname" class="label">Last Name</label><br>
-            <input type="text" id="lname"><br>
-            <label for="email" class="label">Email Address</label><br>
-            <input type="email" id="email"><br>
-            <label for="message" class="label">Message</label><br>
-            <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter your message in here..."></textarea><br>
-            <button type="submit" class="form-button">Submit</button>
-         </form>
-      </div>
-      <div class="contact-links">
-         <a href="https://www.facebook.com/tesfalem.teweldebrhan/" target="_blank" class="btn contact-details">
-            <i class="fab fa-facebook-square"></i>
-            Facebook
-         </a>
-         <a id="profile-link" href="https://github.com/ttekie" target="_blank" class="btn contact-details">
-            <i class="fab fa-github"></i>
-            Github
-         </a>
-         <a href="https://www.linkedin.com/in/tesfalem-tekie-50a098173/" target="_blank" class="btn contact-details">
-            <i class="fab fa-linkedin"></i>
-            Linkedin
-         </a>
-         <a href="mailto:teshanna72016@gmail.com" class="btn contact-details">
-            <i class="fas fa-at"></i> 
-            Email
-         </a>
-         <a href="tel:512-888-6300" class="btn contact-details">
-            <i class="fas fa-mobile-alt"></i> 
-            Phone
-         </a>
-      </div>
-      </section>
-
+         </section>
+         <section id="skills" class="skills-section">
+            <h2 class="skill-title">Skills</h2>
+            <p class="tech">HTML5, CSS3, JavaScript/ES6</p>
+            <p class="tech">Sass, Bootstrap, React,js</p>
+            <p class="tech">Git/Github, Bash</p>
+         </section>
+         <!-- project section -->
+         <section id="portfolio" class="project-section">
+            <h2 class="project-title">Portfolio</h2>
+            <div class="project-grid">
+               <a href="https://ttekie.github.io/tribute-page/" target="_blank" class="project project-tile">
+                  <img src="./images/tribute-site.png" class="project-image" alt="tribute-page">
+                  <p class="project-name">
+                  Tribute Page
+                  </p>
+               </a>
+               <a href="https://ttekie.github.io/uHost-responsive-site/" target="_blank" class="project">
+                  <img src="./images/uHost-site.png" class="project-image" alt="tech-documentation-page">
+                  <p class="project-name">
+                  uHost Responsive Site
+                  </p>
+               </a>
+               <a href="https://ttekie.github.io/tic-tac-toe-game/" target="_blank" class="project">
+                  <img src="./images/tic-tac-toe-game.png" class="project-image" alt="">
+                  <p class="project-name" >
+                  Tic Tac Toe Game
+                  </p>
+               </a>
+               <a href="https://ttekie.github.io/Concentration_Game/" target="_blank" class="project">
+                  <img src="./images/concentration-game.png" class="project-image" alt="concentration-game">
+                  <p class="project-name">         
+                  Concentration Game      
+                  </p>
+               </a>
+               <a href="https://ttekie.github.io/Survey-form/" target="_blank" class="project">
+                  <img src="./images/survey-form.png" class="project-image" alt="survey-form">
+                  <p class="project-name">          
+                  Survey Form
+                  </p>
+               </a>
+               <a href="https://ttekie.github.io/Product_Landing_Page/" target="_blank" class="project">
+                  <img src="./images/product-landing.png" class="project-image" alt="product-landing-page">
+                  <p class="project-name">
+                  Product Landing Page
+                  </p>
+               </a>
+            </div>
+            <a href="https://github.com/ttekie" class="btn btn-show-all" target="_blank">Show all</a>
+         </section>
+         <!--contact section-->
+         <section id="contact" class="contact-section">
+            <div class="form-container">
+               <form action="process.html" method="get" class="form">
+                  <h2 class="contact-title">Contact Me</h2>
+                  <div>
+                     <label for="fname" class="label">First Name</label>
+                     <input type="text" id="fname">
+                  </div>
+                  <div>
+                     <label for="lname" class="label">Last Name</label>
+                     <input type="text" id="lname">   
+                  </div>
+                  <div>
+                     <label for="email" class="label">Email Address</label>
+                     <input type="email" id="email">  
+                  </div>               
+                  <div>
+                     <label for="message" class="label">Message</label>
+                     <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter your message in here..."></textarea>
+                  </div>
+                  <button type="submit" class="form-button" disabled>Submit</button>
+               </form>
+            </div>
+         </section>
+         <footer class="main-footer">
+            <div class="contact-links">
+               <ul class="profile-lists">
+                  <a href="https://www.facebook.com/tesfalem.teweldebrhan/" target="_blank" class="contact-details">
+                     <i class="fab fa-facebook-square"></i>
+                     Facebook
+                  </a>
+                  <a href="https://github.com/ttekie" target="_blank" class="btn contact-details">
+                     <i class="fab fa-github"></i>
+                     Github
+                  </a>
+                  <a href="https://www.linkedin.com/in/tesfalem-tekie-50a098173/" target="_blank" class="contact-details">
+                     <i class="fab fa-linkedin"></i>
+                     Linkedin
+                  </a>
+                  <a href="mailto:teshanna72016@gmail.com" class="contact-details">
+                     <i class="fas fa-at"></i> 
+                     Email
+                  </a>
+                  <a href="tel:512-888-6300" class="contact-details">
+                     <i class="fas fa-mobile-alt"></i> 
+                     Phone
+                  </a>
+               </ul>
+            </div>
+         </footer>  
+      </main>
     <!--font Awesome js-->
       <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script> 
-      <!--Bootstrap core JS-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script> 
-      <!--Third party plugin JS-->
+      <script src="./Js/main.js"></script>
   </body>
 </html>
