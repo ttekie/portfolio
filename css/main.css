@@ -8,6 +8,7 @@
 html {
    box-sizing: border-box;
    scroll-behavior: smooth;
+   overflow-x: hidden;
 }
 * {
    margin: 0;
@@ -31,7 +32,8 @@ h1 {
    font-size: 3.8rem;
 }
 h2 {
-   font-size: 2.4rem;
+   font-size: 2.2rem;
+   font-weight: inherit;
 }
 ul {
    list-style-type: none;
@@ -91,8 +93,13 @@ a {
    }
 }
 /******* main-header style continues here ****************/
+.main-header .logo {
+   text-shadow: 2px 2px var(--red-color);
+   font-weight: 700;
+}
 .main-header .logo::first-letter {
    color: var(--red-color);
+   text-shadow: 2px 2px var(--white-color);
 }
 /* .main-header h2::after {
    content: attr(data-end);
@@ -160,18 +167,24 @@ a {
    height: 15rem;
    border-radius: 50%;
 }
+.hero-section:hover .hero-image {
+   animation: flip-hero 1s ease-out forwards;
+}
 .hero-section > h1 {
    margin: 0.6rem 0;
    text-align: center;
+   text-shadow: -1px 0 var(--red-color), 0 1px var(--red-color), 1px 0 var(--red-color), 0 -1px var(--red-color);
+   font-weight: 700;
 }
 /* .hero-section > h1:first-letter {
    font-size: 4.5rem;
    color: var(--red-color);
 } */
 .hero-title {
-   font-size: 2rem;
+   font-size: 2.2rem;
    color: var(--red-color);
    text-align: center;
+   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
 /******* info-section style **************/
@@ -184,6 +197,7 @@ a {
 .info-section .info-title {
    text-align: center;
    margin-bottom: 1rem;
+   color: var(--red-color);
 }
 .info-section .info-desc {
    width: 65%;
@@ -191,6 +205,13 @@ a {
    font-weight: 300;
    text-align: justify;
    text-align-last: center;
+   
+}
+@media(max-width: 40rem) {
+   .info-section .info-desc {
+      text-align: center;
+      width: 85%;
+   }
 }
 /********* skills-section style ***********/
 .skills-section {
@@ -202,6 +223,7 @@ a {
 }
 .skills-section .skill-title {
    margin-bottom: 1rem;
+   color: var(--red-color);
 }
 .skills-section .tech {
   border-bottom: 4px solid var(--red-color);
@@ -212,11 +234,12 @@ a {
 /********* project-section style *************/ 
 .project-section {
    text-align: center;
-   padding: 4rem 1rem;
+   padding: 4rem 1rem 0.5rem;
    background: var(--black-color);
 }
 .project-title {
    margin-bottom: 1rem;
+   color: var(--red-color);
 }
 .project-grid {
    display: grid;
@@ -247,9 +270,13 @@ a {
 .project-section .btn {
    padding: 0.4rem 1.5rem;
    background-color: var(--red-color);
+   color: var(--white-color);
    border-radius: 5px;
    display: inline-block;
    margin: 0.5rem 0;
+   transition-property: background-color, color;
+   transition-duration: 1s;
+   transition-timing-function: ease-out;
 }
 .project-section .btn:hover {
    background-color: var(--white-color);
@@ -259,7 +286,7 @@ a {
 
 /****** contact-section style *****************/
 .contact-section {
-   padding: 3.5rem 1rem;
+   padding: 3.5rem 1rem 1rem;
 }
 .contact-section .form-container {
    max-width: 46.875rem;
@@ -274,6 +301,7 @@ a {
 .form .contact-title {
    text-align: center;
    margin-bottom: 1rem;
+   color: var(--red-color);
 }
 .form label,
 .form input,
@@ -304,12 +332,16 @@ a {
    background-color: var(--red-color);
    border-radius: 5px;
    display: block;
-   margin: 0.5rem 0;
+   margin: 2rem 0;
    color: var(--white-color);
    font-size: inherit;
    font-family: inherit;
    border: none;
    width: 100%;
+   /* transition: background-color 1s ease-out, color 1s ease-out; */
+   transition-property: background-color, color;
+   transition-duration: 1s;
+   transition-timing-function: ease-out;
 }
 .form-button:hover {
    background-color: var(--white-color);
@@ -319,7 +351,7 @@ a {
 /******** mobile design style **********/
 @media (max-width: 40rem) {
    .contact-section {
-      padding: 2.5rem 0;
+      padding: 4rem 0 2rem;
    }
    .contact-section .form-container {
       width: 100%;
@@ -338,7 +370,7 @@ a {
 .main-footer .profile-lists {
    display: flex;
    justify-content: center;
-   padding: 2rem 0;
+   padding: 1.7rem 0;
 }
 .main-footer .contact-details {
    margin: 0 2rem ;
@@ -350,12 +382,19 @@ a {
    transform: scale(1.2);
    transition: 0.3s;
 }
+@media (max-width: 54.56rem) {
+   .profile-lists i,
+   .profile-lists :last-child {
+      display: none;
+   }
+}
 @media (max-width: 40rem) {
    .main-footer .profile-lists {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      row-gap: 0.5rem;
+      row-gap: 0.3rem;
       justify-items: center;
+      align-items: center;
    }
    .profile-lists i,
    .profile-lists :last-child {
@@ -366,4 +405,16 @@ a {
    display: block;
    opacity: 1;
    transform: translateY(0);
+}
+
+@keyframes flip-hero {
+   0% {
+      transform: rotateY(0);
+   }
+   50% {
+      transform: rotateY(160deg);
+   }
+   100% {
+      transform: rotateY(360deg);
+   }
 }
