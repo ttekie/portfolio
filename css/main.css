@@ -92,7 +92,7 @@ a {
       display: inline-block;
    }
 }
-/******* main-header style continues here ****************/
+/******* main-header style continues here ************/
 .main-header .logo {
    text-shadow: 2px 2px var(--red-color);
    font-weight: 700;
@@ -166,9 +166,6 @@ a {
    width: 15rem;
    height: 15rem;
    border-radius: 50%;
-}
-.hero-section:hover .hero-image {
-   animation: flip-hero 1s ease-out forwards;
 }
 .hero-section > h1 {
    margin: 0.6rem 0;
@@ -405,16 +402,4 @@ a {
    display: block;
    opacity: 1;
    transform: translateY(0);
-}
-
-@keyframes flip-hero {
-   0% {
-      transform: rotateY(0);
-   }
-   50% {
-      transform: rotateY(160deg);
-   }
-   100% {
-      transform: rotateY(360deg);
-   }
 }
