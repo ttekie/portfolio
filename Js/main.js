@@ -7,15 +7,15 @@ toggleButton.addEventListener('click', () => {
    backdrop.classList.add('show');
    mobileNav.classList.add('show');
 });
-
+   
 backdrop.addEventListener('click', eventListener);
-
+mobileNav.addEventListener('click', eventListener);
 function eventListener() {
    mobileNav.classList.remove('show');
    backdrop.classList.remove('show');
 }
 mobileNavItems.addEventListener('click', (event) => {
-   let target = event.target;
+   let target = event.target; 
    switch(target.id) {
       case 'home':
          eventListener();

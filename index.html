@@ -3,7 +3,8 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="css/main.css"/>
+      <link  href="./images/tes-site-logo.png" rel="icon" type="image/png">
+      <link rel="stylesheet"  href="css/main.css"/>
       <title>Portfolio</title>
    </head>
   <body>
@@ -37,6 +38,9 @@
          </nav>
       </header>
       <nav class="mobile-nav">
+         <button class="toggle-button">
+           <div class="bar"></div>
+         </button>
          <ul class="mobile-nav__items">
             <li class="mobile-nav__item">
                <a id="home" href="#hero">Home</a>
@@ -59,7 +63,7 @@
          <section id="hero" class="hero-section">
             <img src="./images/tesimage.png" class="hero-image" alt="developer-image">
             <h1 class="hero-name">Hi, I'm Tesfalem</h1>
-            <p class="hero-title">Front End Web  developer</p>
+            <p class="hero-title">Front End Web Developer</p>
          </section>
          <!--info section-->
          <section id="info" class="info-section">
@@ -69,55 +73,81 @@
                My technical skills include HTML5, CSS3/SASS, Bootstrap, JavaScript, React.js/Redux, WordPress, Bash, Git/Github.
                In my spare time, I enjoy reading and researching on current trends. Please navigate through my site to discover more about me.
             </p>
+            <a href="#" target="_blank" class="info-btn">Resume</a>
          </section>
          <section id="skills" class="skills-section">
             <h2 class="skill-title">Skills</h2>
-            <p class="tech">HTML5, CSS3, JavaScript/ES6</p>
-            <p class="tech">Sass, Bootstrap, React.js, Redux</p>
-            <p class="tech">Git/Github, Bash</p>
+            <ul>
+               <li class="tech">HTML5, CSS3, JavaScript/ES6</li>
+               <li class="tech">Sass, Bootstrap, React.js, Redux</li>
+               <li class="tech">Git/Github, Bash, VScode</li>
+            </ul>
          </section>
          <!-- project section -->
          <section id="portfolio" class="project-section">
-            <h2 class="project-title">Portfolio</h2>
+            <h2 class="project-heading">Portfolio</h2>
             <div class="project-grid">
-               <a href="https://ttekie.github.io/tribute-page/" target="_blank" class="project project-tile">
-                  <img src="./images/tribute-site.png" class="project-image" alt="tribute-page">
-                  <p class="project-name">
-                  Tribute Page
-                  </p>
-               </a>
-               <a href="https://ttekie.github.io/uHost-responsive-site/" target="_blank" class="project">
-                  <img src="./images/uHost-site.png" class="project-image" alt="tech-documentation-page">
-                  <p class="project-name">
-                  uHost Responsive Site
-                  </p>
-               </a>
-               <a href="https://ttekie.github.io/tic-tac-toe-game/" target="_blank" class="project">
-                  <img src="./images/tic-tac-toe-game.png" class="project-image" alt="">
-                  <p class="project-name" >
-                  Tic Tac Toe Game
-                  </p>
-               </a>
-               <a href="https://ttekie.github.io/Concentration_Game/" target="_blank" class="project">
-                  <img src="./images/concentration-game.png" class="project-image" alt="concentration-game">
-                  <p class="project-name">         
-                  Concentration Game      
-                  </p>
-               </a>
-               <a href="https://ttekie.github.io/Survey-form/" target="_blank" class="project">
-                  <img src="./images/survey-form.png" class="project-image" alt="survey-form">
-                  <p class="project-name">          
-                  Survey Form
-                  </p>
-               </a>
-               <a href="https://ttekie.github.io/Product_Landing_Page/" target="_blank" class="project">
-                  <img src="./images/product-landing.png" class="project-image" alt="product-landing-page">
-                  <p class="project-name">
-                  Product Landing Page
-                  </p>
-               </a>
+               <div class="project-container">
+                  <h3 class="project-title">Tribute Page</h3>
+                  <div class="project-image">
+                     <img src="./images/tribute-site.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/tribute-page" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/tribute-page/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
+               <div class="project-container">
+                  <h3 class="project-title">uHost Responsive Site</h3>
+                  <div class="project-image">
+                     <img src="./images/uHost-site.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/uHost-responsive-site" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/uHost-responsive-site/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
+               <div class="project-container">
+                  <h3 class="project-title">Tic Tac Toe Game</h3>
+                  <div class="project-image">
+                     <img src="./images/tic-tac-toe-game.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/tic-tac-toe-game" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/tic-tac-toe-game/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
+               <div class="project-container"> 
+                  <h3 class="project-title">Concentration Game</h3>
+                  <div class="project-image">
+                     <img src="./images/concentration-game.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/Concentration_Game" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/Concentration_Game/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
+               <div class="project-container">
+                  <h3 class="project-title">Survey Form</h3>
+                  <div class="project-image">
+                     <img src="./images/survey-form.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/Survey-form" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/Survey-form/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
+               <div class="project-container">
+                  <h3 class="project-title">Product Landing Page</h3>
+                  <div class="project-image">
+                     <img src="./images/product-landing.png" alt="" class="project-image">
+                  </div>
+                  <div class="project-links">
+                     <a href="https://github.com/ttekie/Product_Landing_Page" class="project-link" target="_blank">Source Code</a>
+                     <a href="https://ttekie.github.io/Product_Landing_Page/" class="project-link" target="_blank">Live Demo</a>
+                  </div>
+               </div>
             </div>
-            <a href="https://github.com/ttekie" class="btn btn-show-all" target="_blank">Show all</a>
          </section>
          <!--contact section-->
          <section id="contact" class="contact-section">
@@ -138,7 +168,7 @@
                   </div>               
                   <div>
                      <label for="message" class="label">Message</label>
-                     <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter your message in here..."></textarea>
+                     <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter your message in here....."></textarea>
                   </div>
                   <button type="submit" class="form-button" disabled>Submit</button>
                </form>
@@ -168,6 +198,9 @@
                      Phone
                   </a>
                </ul>
+               <div class="copyright">
+                  <small>&copy; Copyright Tesfalem Tekie 2022</small>
+               </div>
             </div>
          </footer>  
       </main>
