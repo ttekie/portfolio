@@ -9,11 +9,12 @@ toggleButton.addEventListener('click', () => {
 });
    
 backdrop.addEventListener('click', eventListener);
-mobileNav.addEventListener('click', eventListener);
+
 function eventListener() {
    mobileNav.classList.remove('show');
    backdrop.classList.remove('show');
 }
+eventListener();
 mobileNavItems.addEventListener('click', (event) => {
    let target = event.target; 
    switch(target.id) {
