@@ -234,9 +234,10 @@ a {
    color: var(--red-color);
 }
 .skills-section .tech {
-  border-bottom: 4px solid var(--red-color);
-  margin-bottom: 0.5rem;
-  font-weight: 300;
+   border-bottom: 4px solid var(--red-color);
+   margin-bottom: 0.5rem;
+   font-weight: 300;
+   text-align: center;
 } 
 
 /********* project-section style *************/ 
