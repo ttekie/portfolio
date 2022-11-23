@@ -345,6 +345,8 @@ a {
    font-family: inherit;
    font-weight: 300;
    background-color: var(--darkblue-color);
+   padding-left: 0.7rem;
+   border-radius: 0.5rem;
 }
 .form textarea {
    resize: none;
