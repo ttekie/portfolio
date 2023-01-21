@@ -163,9 +163,7 @@ a {
    width: 15rem;
    height: 15rem; 
 }
-.hero-image:hover {
-   box-shadow: 10px 10px var(--red-color);
-}
+
 .hero-section > h1 {
    margin: 0.6rem 0;
    text-align: center;
