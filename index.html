@@ -33,9 +33,9 @@
                <li class="main-nav__list">
                   <a href="#portfolio">Portfolio</a>
                </li>
-               <!-- <li class="main-nav__list">
+               <li class="main-nav__list">
                   <a href="#contact">Contact</a>
-               </li> -->
+               </li>
             </ul>
          </nav>
       </header>
@@ -57,9 +57,12 @@
             <li class="mobile-nav__item">
                <a id="projects" href="#portfolio">Portfolio</a>
             </li>
-            <!-- <li class="mobile-nav__item">
+            <li class="mobile-nav__item">
                <a id="contacts" href="#contact">Contact</a>
-            </li> -->
+            </li>
+            <li class="mobile-nav__resume">
+               <a href="./asset/tesfalem-resume.pdf" target="_blank" class="info-btn">Resume</a>
+            </li>
          </ul>
       </nav>
       <main class="main-section">
@@ -138,7 +141,6 @@
                      <a href="https://venued.us/" class="project-link" target="_blank">Live Demo</a>
                   </div>
                </div>
-               
                <div class="project-container">
                   <h3 class="project-title">Weather App</h3>
                   <div class="project-image">
@@ -196,24 +198,24 @@
          <section id="contact" class="contact-section">
             <div class="form-container">
                <form action="#" method="get" class="form">
-                  <h2 class="contact-title">Contact Me</h2>
+                  <h2 class="contact-title">Get In Touch</h2>
                   <div>
                      <label for="fname" class="label">First Name</label>
-                     <input type="text" name="fname" id="fname">
+                     <input type="text" name="fname" id="fname" required>
                   </div>
                   <div>
                      <label for="lname" class="label">Last Name</label>
-                     <input type="text" name="lname" id="lname">   
+                     <input type="text" name="lname" id="lname" required>   
                   </div>
                   <div>
                      <label for="email" class="label">Email Address</label>
-                     <input type="email" name ="email" id="email">  
+                     <input type="email" name ="email" id="email" required>  
                   </div>               
                   <div>
                      <label for="message" class="label">Message</label>
                      <textarea name="message" id="message" cols="50" rows="5" placeholder="Enter your message in here....."></textarea>
                   </div>
-                  <button type="submit" class="form-button" disabled>Submit</button>
+                  <button type="submit" class="form-button">Submit</button>
                </form>
             </div>
          </section> 
