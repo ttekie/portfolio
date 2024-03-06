@@ -10,34 +10,33 @@ const message = document.querySelector('#message');
 const submitBtn = document.querySelector('[type="submit"]');
 
 const contentInfo = [firstName, lastName, email, message];
+// submitBtn.addEventListener('click', handleChange);
 
-submitBtn.addEventListener('click', handleChange);
+// function handleChange(event) {
+//    event.preventDefault(); // prevent the default submission of the form data
 
-function handleChange(event) {
-   event.preventDefault(); // prevent the default submission of the form data
+//    let formValues = {
+//      firstName: firstName.value,
+//      lastName: lastName.value,
+//      email: email.value,
+//      message: message.value
+//    };
 
-   let formValues = {
-     firstName: firstName.value,
-     lastName: lastName.value,
-     email: email.value,
-     message: message.value
-   };
+//    if(formValues.firstName === '' && formValues.lastName === '' &&
+//       formValues.email === '') {
+//          alert('Please fill out the form before you submit!');
+//    } else {
+//       saveForm(formValues);
+//    }
+//    contentInfo.forEach(item => {
+//       item.value = '';
+//    });
+// }
 
-   if(formValues.firstName === '' && formValues.lastName === '' &&
-      formValues.email === '') {
-         alert('Please fill out the form before you submit!');
-   } else {
-      saveForm(formValues);
-   }
-   contentInfo.forEach(item => {
-      item.value = '';
-   });
-}
-
-function saveForm(formValues) {
-   const formDataString = JSON.stringify(formValues);
-   localStorage.setItem('form', formDataString);
-}
+// function saveForm(formValues) {
+//    const formDataString = JSON.stringify(formValues);
+//    localStorage.setItem('form', formDataString);
+// }
 
 toggleButton.addEventListener('click', () => {
    backdrop.classList.add('show');
